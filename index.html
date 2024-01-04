@@ -261,6 +261,16 @@
     });
   ]]>
   </script>
+	function updateContrast() {
+    const body = document.querySelector('body');
+    const textColor = getComputedStyle(body).getPropertyValue('--text-color');
+    const backgroundColor = getComputedStyle(body).getPropertyValue('--background-color');
+	const contrast = calculateContrast(textColor, backgroundColor);
+    if (contrast < 4.5) {
+      body.style.setProperty('--text-color', '#fff');return contrastValue;
+	    window.addEventListener('load', updateContrast);
+  window.addEventListener('resize', updateContrast);
+    </script>
    <script src=".https://open.spotify.com/playlist/6AFs9Vlt3uMnEzIwTecyaO?si=vxKaQDjrRRqr4G551Zb0sQ&pi=a-_PauBGK5TvaJ"></script>
    <script src="./hoa-dao.js"></script>
    <footer>
