@@ -267,8 +267,22 @@
         &copy; 2023-24_HSB, PhamHungVN and GPT 4
     </footer>
 <!-- nơi chèn javascript -->
-	
-	
+	<script>
+  function updateContrast() {
+    const body = document.querySelector('body');
+    const textColor = getComputedStyle(body).getPropertyValue('--text-color');
+    const backgroundColor = getComputedStyle(body).getPropertyValue('--background-color');
+    
+    const contrast = calculateContrast(textColor, backgroundColor);
+    if (contrast < 4.5) {
+      body.style.setProperty('--text-color', '#fff');
+    }
+  }
+function calculateContrast(color1, color2) {return contrastValue
+					   }
+		window.addEventListener('load', updateContrast);
+  window.addEventListener('resize', updateContrast);
+	</script>
 <!-- Kết thúc phần hiển thị -->
 </body>
 </html>
