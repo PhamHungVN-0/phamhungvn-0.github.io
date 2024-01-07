@@ -2,8 +2,8 @@
 You want visit this Repo to see how i'm doing this?
 
 ## my info
-[Facebook](https://pip.pypa.io/en/stable/) Pham Hung
-[GitHub](https://github.com/PhamHung1278/) PhamHung1278
+[Facebook](https://pip.pypa.io/en/stable/) 
+[GitHub](https://github.com/PhamHung1278/)
 [Email](phamhung12078@gmail.com/)
 
 ## about this repo
