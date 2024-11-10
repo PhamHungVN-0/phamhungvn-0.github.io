@@ -31,6 +31,7 @@
             justify-content: center; /* Căn giữa theo chiều dọc */
             align-items: center; /* Căn giữa theo chiều ngang */
             padding: 20px;
+            margin: 0;
             overflow: hidden; /* Ngăn cuộn trang */
         }
 
@@ -102,21 +103,6 @@
             margin-top: 20px;
         }
 
-        .card-buttons button {
-            background-color: #007bff;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 15px;
-            margin: 0 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
-        }
-
-        .card-buttons button:hover {
-            background-color: #0056b3;
-        }
-
         .card-social {
             display: flex;
             justify-content: center;
@@ -134,6 +120,45 @@
         .card-social a:hover {
             color: #0056b3;
         }
+
+        .card-buttons {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+       }
+        
+        .card-buttons button {
+            color: #2b2c48; /* Màu chữ */
+            border: none;
+            border-radius: 10px; /* Để bo góc giống như card */
+            padding: 10px 15px;
+            margin: 0 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển đổi */
+            backdrop-filter: blur(3.5px); /* Hiệu ứng nền mờ */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ giống như card */
+            background-color: rgba(255, 255, 255, 0.7); /* Nền trắng với độ trong suốt */
+        }
+
+        .card-buttons button.about {
+            background-color: rgb(242,242,242,0); /* Màu xanh dương với độ trong suốt */
+        }
+
+        .card-buttons button.experience {
+            background-color: rgba(191,187,174,0); /* Màu đỏ với độ trong suốt */
+        }
+
+        .card-buttons button.contact {
+            background-color: rgba(191,187,174,0); /* Màu xanh lá cây với độ trong suốt */
+        }
+
+        .card-buttons button:hover {
+            transform: scale(1.05); /* Tăng kích thước khi hover */
+        }
+
+        .card-buttons button.is-active {
+            background-color: rgba(0, 86, 179, 0.9); /* Màu nền cho nút đang hoạt động */
+        }
     </style>
 </head>
 <body>
@@ -146,7 +171,7 @@
     <!-- DISPLAY -->
     <div class='card' data-state='#about'>
         <div class='card-header'>
-            <img alt='avatar' class='card-avatar' src='https://raw.githubusercontent.com/PhamHung1278/PhamHung1278.github.io/main/FB_IMG_1704091453760.jpg' />
+            <img alt='avatar' class='card-avatar' src ='https://raw.githubusercontent.com/PhamHung1278/PhamHung1278.github.io/main/FB_IMG_1704091453760.jpg' />
         </div>
         <div class='card-main'>
             <h1 class='card-fullname'>PhamHungVN <img src="./image/tichhong.gif" width="16" height="16" alt="Tích Xanh"></h1>
@@ -192,12 +217,11 @@
     </div>
     
     <!-- Card for buttons -->
-    <div class='button-card'>
-        <div class='card-buttons'>
-            <button class='is-active' data-section='#about'>ABOUT</button>
-            <button data-section='#experience'>EXPERIENCE</button>
-            <button data-section='#contact'>CONTACT</button>
-        </div>
+    <div class='card-buttons'>
+        <button class='about is-active' data-section='#about'>ABOUT</button>
+        <button class='experience' data-section='#experience'>EXPERIENCE</button>
+        <button class='contact' data-section='#contact'>CONTACT</button>
+    </div>
     </div>
 
     <script>
