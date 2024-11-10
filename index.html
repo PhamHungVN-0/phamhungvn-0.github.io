@@ -27,17 +27,17 @@
             background-attachment: fixed;
             min-height: 100vh;
             display: flex;
-            flex-direction: column; /* Căn chỉnh theo chiều dọc */
-            justify-content: center; /* Căn giữa theo chiều dọc */
-            align-items: center; /* Căn giữa theo chiều ngang */
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center;
             padding: 20px;
             margin: 0;
-            overflow: hidden; /* Ngăn cuộn trang */
+            overflow: hidden;
         }
 
         .card {
             max-width: 340px;
-            width: 100%; /* Đảm bảo chiều rộng 100% */
+            width: 100%; 
             overflow: hidden;
             position: relative;
             display: flex;
@@ -46,15 +46,15 @@
             border-radius: 10px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
             transition: 0.3s;
-            align-items: center; /* Căn giữa theo chiều ngang */
-            padding: 20px; /* Thêm padding để tạo khoảng cách cho nội dung */
-            margin-bottom: 20px; /* Khoảng cách giữa card và nút */
+            align-items: center; 
+            padding: 20px; 
+            margin-bottom: 20px; 
         }
 
         .card-header {
             position: relative;
             height: 200px;
-            width: 100%; /* Đảm bảo chiều rộng 100% */
+            width: 100%; /* For sure wide 100% */
             border-radius: 10px;
             background: url('https://4kwallpapers.com/images/walls/thumbs_3t/15385.jpg') no-repeat center center/cover;
         }
@@ -85,16 +85,16 @@
         }
 
         .card-section {
-            display: none;
+ display: none;
             padding: 20px;
             text-align: center;
             opacity: 0;
-            transition: opacity 0.5s ease; /* Hiệu ứng chuyển cảnh */
+            transition: opacity 0.5s ease; /* Transtition Effect */
         }
 
         .card-section.is-active {
             display: block;
-            opacity: 1; /* Hiện nội dung */
+            opacity: 1; /* Show content */
         }
 
         .card-buttons {
@@ -113,51 +113,47 @@
             margin: 0 10px;
             color: #007bff;
             transition: color 0.3s;
-            width: 25px; /* Chiều rộng của nút */
-            height: 25px; /* Chiều cao của nút */
+            width: 25px; /* Button width */
+            height: 25px; /* Button height */
         }
 
         .card-social a:hover {
             color: #0056b3;
         }
 
-        .card-buttons {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-       }
-        
         .card-buttons button {
-            color: #2b2c48; /* Màu chữ */
+            color: #2b2c48; /* Text Color */
             border: none;
-            border-radius: 10px; /* Để bo góc giống như card */
+            border-radius: 10px; /* Border */
             padding: 10px 15px;
             margin: 0 5px;
             cursor: pointer;
-            transition: background-color 0.3s, transform 0.3s; /* Thêm hiệu ứng chuyển đổi */
-            backdrop-filter: blur(3.5px); /* Hiệu ứng nền mờ */
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Bóng đổ giống như card */
-            background-color: rgba(255, 255, 255, 0.7); /* Nền trắng với độ trong suốt */
-        }
-
-        .card-buttons button.about {
-            background-color: rgb(242,242,242,0); /* Màu xanh dương với độ trong suốt */
-        }
-
-        .card-buttons button.experience {
-            background-color: rgba(191,187,174,0); /* Màu đỏ với độ trong suốt */
-        }
-
-        .card-buttons button.contact {
-            background-color: rgba(191,187,174,0); /* Màu xanh lá cây với độ trong suốt */
+            transition: background-color 0.3s, transform 0.3s; /* Transition Effect */
+            backdrop-filter: blur(3.5px); /* Blur Effect */
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Shader */
+            background-color: rgba(255, 255, 255, 0.7); /* Background with Transparent */
         }
 
         .card-buttons button:hover {
-            transform: scale(1.05); /* Tăng kích thước khi hover */
+            transform: scale(1.05); /* Increase size when hover */
         }
 
         .card-buttons button.is-active {
-            background-color: rgba(0, 86, 179, 0.9); /* Màu nền cho nút đang hoạt động */
+            background-color: rgba(0, 86, 179, 0.9); /* Color for button pressed */
+        }
+
+        @media (max-width: 600px) {
+            .card {
+                margin: 10px; /* Decrease card when click */
+            }
+
+            .card-fullname {
+                font-size: 20px; /* Decrease text */
+            }
+
+            .card-jobtitle {
+                font-size: 12px; /* Decrese for job title */
+            }
         }
     </style>
 </head>
@@ -174,7 +170,7 @@
             <img alt='avatar' class='card-avatar' src ='https://raw.githubusercontent.com/PhamHung1278/PhamHung1278.github.io/main/FB_IMG_1704091453760.jpg' />
         </div>
         <div class='card-main'>
-            <h1 class='card-fullname'>PhamHungVN <img src="./image/tichhong.gif" width="16" height="16" alt="Verified"></h1>
+            <h1 class='card-fullname'>PhamHungVN <img src="./image/verified.png" width="16" height="16" alt="Verified"></h1>
             <h2 class='card-jobtitle'>"SUPER" Basic Developer | Student</h2>
             <div class='card-section is-active' id='about'>
                 <div class='card-content'>
@@ -186,13 +182,17 @@
                 <div class='card-social'>
                     <a href='https://facebook.com/phamhungvn0' target="_blank">
                         <svg viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
-                            <path d='M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V 9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z'></path>
+                            <path d='M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V 9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077  2.051-2.077z'></path>
                         </svg>
                     </a>
                     <a href='https://youtu.be/dQw4w9WgXcQ?si=fUqySWHcMyeuINXm' target="_blank">
-                        <svg viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
-                            <path d='M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0'></path>
-                            <path d='M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75  33.645 75 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0'></path>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="23.5" height="23.5">
+                            <path fill="#FF0000" d="M22.54 6.42c-.21-1.56-1.12-2.81-2.56-3.18C18.5 3.5 12 3.5 12 3.5s-6.5 0-8.98.74C2.68 3.61 1.77 4.86 1.56 6.42 1.3 8.04 1.3 12 1.3 12s0 3.96.26 5.58c.21 1.56 1.12 2.81 2.56 3.18C5.5 20.5 12 20.5 12 20.5s6.5 0 8.98-.74c1.44-.37 2.35-1.62 2.56-3.18.26-1.62.26-5.58.26-5.58s0-3.96-.26-5.58zM10 15.5V8.5l6 3.5-6 3.5z"></path>
+                        </svg>
+                    </a>
+                    <a href="https://github.com/PhamHung1278" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" width="24" height="24">
+                            <path fill="#181717" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.54 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.73-.01-1.43-2.24.49-2.71-1.08-2.71-1.08-.36-.91-.88-1.15-.88-1.15-.72-.49.05-.48.05-.48.8.06 1.22.82 1.22.82.71 1.22 1.86.87 2.31.66.07-.51.28-.87.51-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.58.82-2.14-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.33-.27 2.01-.27.68 0 1.37.09 2.01.27 1.53-1.03 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.14 0 3.07-1.87 3.75-3.65 3.95.29.25.55.74.55 1.49 0 1.08-.01 1.95-.01 2.21 0 .21.15.46.55.38C13.71 14.54 16 11.54 16 8c0-4.42-3.58-8-8-8z"/>
                         </svg>
                     </a>
                 </div>
@@ -209,7 +209,7 @@
                 <div class='card-content'>
                     <div class='card-subtitle'>Contact</div>
                     <div class='file-text'>
-                        <p>You can reach me at: <a href='mailto:example@example.com'>example@example.com</a></p>
+                        < p>You can reach me at: <a href='mailto:example@example.com'>example@example.com</a></p>
                     </div>
                 </div>
             </div>
@@ -231,14 +231,14 @@
             const targetSection = e.target.getAttribute("data-section");
             sections.forEach(s => {
                 s.classList.remove("is-active");
-                s.style.opacity = 0; // Ẩn nội dung
+                s.style.opacity = 0; // Hide Content
             });
             buttons.forEach(b => b.classList.remove("is-active"));
             e.target.classList.add("is-active");
             const activeSection = document.querySelector(targetSection);
             activeSection.classList.add("is-active");
             setTimeout(() => {
-                activeSection.style.opacity = 1; // Hiện nội dung với hiệu ứng
+                activeSection.style.opacity = 1; // Show Content with Effect
             }, 10);
         };
         buttons.forEach(btn => {
