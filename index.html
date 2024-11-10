@@ -134,3 +134,22 @@
             <h1 class='card-fullname'>PhamHungVN <img src="./image/tichhong.gif" width="16" height="16" alt="Tích Xanh"></h1>
             <h2 class='card-jobtitle'>"SUPER" Basic Developer | Student</h2>
             <div class='card-section is-active' id='
+<script>
+  function updateContrast() {
+    const body = document.querySelector('body');
+    const textColor = getComputedStyle(body).getPropertyValue('--text-color');
+    const backgroundColor = getComputedStyle(body).getPropertyValue('--background-color');
+    
+    const contrast = calculateContrast(textColor, backgroundColor);
+    if (contrast < 4.5) {
+      body.style.setProperty('--text-color', '#fff');
+    }
+  }
+function calculateContrast(color1, color2) {return contrastValue
+					   }
+		window.addEventListener('load', updateContrast);
+  window.addEventListener('resize', updateContrast);
+    	</script>
+    <script src="./hoa-dao.js"></script>
+</body>
+</html>
