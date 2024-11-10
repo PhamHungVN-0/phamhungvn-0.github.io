@@ -5,39 +5,57 @@
     <title>PhamHungVN - About</title>
     <meta name='viewport' content='width=device-width, initial-scale=1.0' />
     <link href='https://github.com/PhamHung1278/PhamHung1278.github.io/blob/main/FB_IMG_1704091453760.jpg' rel='shortcut icon' type='image/x-icon' />
+    <meta property='og:image' content='https://raw.githubusercontent.com/PhamHung1278/PhamHung1278.github.io/main/FB_IMG_1704091453760.jpg' />
+    <meta property='og:url' content='https://www.facebook.com/photo.php?fbid=1126892221632826&set=a.115007662821292&type=3&mibextid=rS40aB7S9Ucbxw6v' />
+    <meta property='og:type' content='website' />
+    <meta property='og:title' content='PhamHungVN - About' />
+    <meta property='og:description' content='Made by: PhamHungVN' />
     <link href='https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css' rel='stylesheet' />
+    
+    <!-- Import Google Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:400,500|Jost:400,500,600&display=swap" rel="stylesheet">
+
+    <!-- CSS CODE -->
     <style>
-        body {
-            font-family: 'Google Sans', sans-serif;
-            background-image: url('https://i.imgur.com/eLOvXNM.jpeg');
+        html, body {
+            cursor: url("https://1.bp.blogspot.com/-qbWo9mPKO2Y/YL9utYdQBdI/AAAAAAAAFs4/mtjGu6u2uGwtJsT4gZG4lbhLV1a5lG6OQCLcBGAsYHQ/s0/mouse-f1.png"), auto;
+            color: #2b2c48;
+            font-family: "Jost", sans-serif;
+            background-image: url(https://images.alphacoders.com/137/thumb-1920-1374572.png);
             background-size: cover;
             background-position: center;
+            background-attachment: fixed;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            color: #2b2c48;
+            flex-direction: column; /* Căn chỉnh theo chiều dọc */
+            justify-content: center; /* Căn giữa theo chiều dọc */
+            align-items: center; /* Căn giữa theo chiều ngang */
             padding: 20px;
+            overflow: hidden; /* Ngăn cuộn trang */
         }
 
         .card {
             max-width: 340px;
-            background: rgba(255, 255, 255, 0.9);
-            border-radius: 10px;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+            width: 100%; /* Đảm bảo chiều rộng 100% */
             overflow: hidden;
-            transition: transform 0.3s;
-        }
-
-        .card:hover {
-            transform: scale(1.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            backdrop-filter: blur(3.5px);
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transition: 0.3s;
+            align-items: center; /* Căn giữa theo chiều ngang */
+            padding: 20px; /* Thêm padding để tạo khoảng cách cho nội dung */
+            margin-bottom: 20px; /* Khoảng cách giữa card và nút */
         }
 
         .card-header {
             position: relative;
-            background: url('https://i.imgur.com/OhqFAtR.jpeg') no-repeat center center/cover;
             height: 200px;
+            width: 100%; /* Đảm bảo chiều rộng 100% */
+            border-radius: 10px;
+            background: url('https://4kwallpapers.com/images/walls/thumbs_3t/15385.jpg') no-repeat center center/cover;
         }
 
         .card-avatar {
@@ -65,92 +83,143 @@
             color: #555;
         }
 
-        .card-main {
-            padding: 20px;
-        }
-
         .card-section {
             display: none;
+            padding: 20px;
+            text-align: center;
+            opacity: 0;
+            transition: opacity 0.5s ease; /* Hiệu ứng chuyển cảnh */
         }
 
         .card-section.is-active {
             display: block;
+            opacity: 1; /* Hiện nội dung */
         }
 
         .card-buttons {
             display: flex;
-            justify-content: space-between;
+            justify-content: center;
             margin-top: 20px;
         }
 
         .card-buttons button {
-            flex: 1;
-            background: #007bff;
+            background-color: #007bff;
             color: white;
             border: none;
             border-radius: 5px;
-            padding: 10px;
+            padding: 10px 15px;
             margin: 0 5px;
             cursor: pointer;
-            transition: background 0.3s;
+            transition: background-color 0.3s;
         }
 
         .card-buttons button:hover {
-            background: #0056b3;
+            background-color: #0056b3;
         }
 
         .card-social {
             display: flex;
             justify-content: center;
-            margin-top: 10px;
+            margin-top: 20px;
         }
 
         .card-social a {
             margin: 0 10px;
             color: #007bff;
             transition: color 0.3s;
+            width: 25px; /* Chiều rộng của nút */
+            height: 25px; /* Chiều cao của nút */
         }
 
         .card-social a:hover {
             color: #0056b3;
         }
-
-        footer {
-            margin-top: auto;
-            padding: 20px;
-            text-align: center;
-            background: #35424a;
-            color: white;
-            width: 100%;
-        }
     </style>
 </head>
 <body>
-    <div class='card'>
+    <div id="particles-js"></div>
+    <div class="Not-CopySource" id="Facebook_@phamhungvn0">
+        <!-- Facebook: phamhungvn0 --> 
+        <!-- Don't Del Source @PhamHungVN -->
+    </div>
+    
+    <!-- DISPLAY -->
+    <div class='card' data-state='#about'>
         <div class='card-header'>
             <img alt='avatar' class='card-avatar' src='https://raw.githubusercontent.com/PhamHung1278/PhamHung1278.github.io/main/FB_IMG_1704091453760.jpg' />
         </div>
         <div class='card-main'>
             <h1 class='card-fullname'>PhamHungVN <img src="./image/tichhong.gif" width="16" height="16" alt="Tích Xanh"></h1>
             <h2 class='card-jobtitle'>"SUPER" Basic Developer | Student</h2>
-            <div class='card-section is-active' id='
-<script>
-  function updateContrast() {
-    const body = document.querySelector('body');
-    const textColor = getComputedStyle(body).getPropertyValue('--text-color');
-    const backgroundColor = getComputedStyle(body).getPropertyValue('--background-color');
+            <div class='card-section is-active' id='about'>
+                <div class='card-content'>
+                    <div class='card-subtitle'>ABOUT</div>
+                    <div class='file-text'>
+                        <p>I'm a passionate developer with a love for creating innovative solutions. I enjoy coding and learning new technologies.</p>
+                    </div>
+                </div>
+                <div class='card-social'>
+                    <a href='https://facebook.com/phamhungvn0' target="_blank">
+                        <svg viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg'>
+                            <path d='M15.997 3.985h2.191V.169C17.81.117 16.51 0 14.996 0c-3.159 0-5.323 1.987-5.323 5.639V 9H6.187v4.266h3.486V24h4.274V13.267h3.345l.531-4.266h-3.877V6.062c.001-1.233.333-2.077 2.051-2.077z'></path>
+                        </svg>
+                    </a>
+                    <a href='https://youtu.be/dQw4w9WgXcQ?si=fUqySWHcMyeuINXm' target="_blank">
+                        <svg viewbox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'>
+                            <path d='M301 256c0 24.852-20.148 45-45 45s-45-20.148-45-45 20.148-45 45-45 45 20.148 45 45zm0 0'></path>
+                            <path d='M332 120H180c-33.086 0-60 26.914-60 60v152c0 33.086 26.914 60 60 60h152c33.086 0 60-26.914 60-60V180c0-33.086-26.914-60-60-60zm-76 211c-41.355 0-75-33.645-75-75s33.645-75 75-75 75  33.645 75 75 75-33.645 75-75 75zm86-146c-8.285 0-15-6.715-15-15s6.715-15 15-15 15 6.715 15 15-6.715 15-15 15zm0 0'></path>
+                        </svg>
+                    </a>
+                </div>
+            </div>
+            <div class='card-section' id='experience'>
+                <div class='card-content'>
+                    <div class='card-subtitle'>EXPERIENCE</div>
+                    <div class='file-text'>
+                        <p>I have worked on various projects including web development and mobile applications. My experience includes using HTML, CSS, JavaScript, and Python.</p>
+                    </div>
+                </div>
+            </div>
+            <div class='card-section' id='contact'>
+                <div class='card-content'>
+                    <div class='card-subtitle'>CONTACT</div>
+                    <div class='file-text'>
+                        <p>You can reach me at: <a href='mailto:example@example.com'>example@example.com</a></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
     
-    const contrast = calculateContrast(textColor, backgroundColor);
-    if (contrast < 4.5) {
-      body.style.setProperty('--text-color', '#fff');
-    }
-  }
-function calculateContrast(color1, color2) {return contrastValue
-					   }
-		window.addEventListener('load', updateContrast);
-  window.addEventListener('resize', updateContrast);
-    	</script>
-    <script src="./hoa-dao.js"></script>
-<!-- Kết thúc phần hiển thị -->
+    <!-- Card for buttons -->
+    <div class='button-card'>
+        <div class='card-buttons'>
+            <button class='is-active' data-section='#about'>ABOUT</button>
+            <button data-section='#experience'>EXPERIENCE</button>
+            <button data-section='#contact'>CONTACT</button>
+        </div>
+    </div>
+
+    <script>
+        const buttons = document.querySelectorAll(".card-buttons button");
+        const sections = document.querySelectorAll(".card-section");
+        const handleButtonClick = e => {
+            const targetSection = e.target.getAttribute("data-section");
+            sections.forEach(s => {
+                s.classList.remove("is-active");
+                s.style.opacity = 0; // Ẩn nội dung
+            });
+            buttons.forEach(b => b.classList.remove("is-active"));
+            e.target.classList.add("is-active");
+            const activeSection = document.querySelector(targetSection);
+            activeSection.classList.add("is-active");
+            setTimeout(() => {
+                activeSection.style.opacity = 1; // Hiện nội dung với hiệu ứng
+            }, 10);
+        };
+        buttons.forEach(btn => {
+            btn.addEventListener("click", handleButtonClick);
+        });
+    </script>
 </body>
 </html>
